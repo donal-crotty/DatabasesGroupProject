@@ -12,22 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('pages.index');
+    return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/welcome', 'WelcomeController@index')->name('welcome');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/about', 'PagesController@about');
 Route::get('/products', 'PagesController@products');
 Route::get('/contact', 'PagesController@contact');
 
-//Route::get('/about', function () {
-//return view('pages.about');
-//});
-// Route::get('/whatwedo', function () {
-//     return view('pages.whatwedo');
-// });
-// Route::get('/users/{id}/{name}', function ($id, $name) {
-//     return 'this is user '.$id. ' with a name of '.$name;
-// });
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

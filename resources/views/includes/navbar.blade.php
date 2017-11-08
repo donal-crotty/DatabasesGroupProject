@@ -1,4 +1,4 @@
-<!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<!--  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -21,9 +21,9 @@
                 <button class="btn btn-success" style="float: right" href="/login" role="button">Login</button>
             </div>
         </div> 
-    </nav>-->
+    </nav> -->
 
-     <nav class="navbar navbar-inverse">
+<!--      <nav class="navbar navbar-inverse">
              <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -33,10 +33,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">The Cooper's Stash</a>
-            </div>
+            </div> -->
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
+                <!-- <div class="collapse navbar-collapse" id="app-navbar-collapse"> -->
+                    <!-- Left Side Of Navbar
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
@@ -46,9 +46,9 @@
                         <li><a href="/products">Products</a></li>
                         <li><a href="/contact">Contact</a></li>
                      </ul> 
-                    <!-- Right Side Of Navbar -->
+                    <!-- Right Side Of Navbar
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+                        <!-- Authentication Links
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
@@ -76,4 +76,4 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav>  --> --> -->

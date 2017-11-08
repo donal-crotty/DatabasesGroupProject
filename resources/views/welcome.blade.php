@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@extends('includes.header')
+@include('includes.header')
 <!-- @section('content') -->
     <!-- Half Page Image Background Carousel Header -->
-<header id="myCarousel" class="carousel slide">
+    <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
