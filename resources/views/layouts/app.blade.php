@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="{{ app()->getLocale() }}">
+<head>
+   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <head>
+    <title>The Cooper's Stash</title>
 
-        <title></title>
+     <!--links for datatable-->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/jquery.dataTables.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/half-slider.css" rel="stylesheet">
 
-        <!--links for datatable-->
-        <script src="/js/jquery.js"></script>
-        <script src="/js/main.js"></script>
-        <script src="/js/jquery.dataTables.js"></script>
-        <script src="/js/bootstrap.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+</head>
+<body>
+    @include('includes.navbar') 
+    <div class="container">
+        @yield('content')
+    </div>
 
-        <link rel="stylesheet" href="/css/jquery.DataTables.css"/>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <link rel="shortcut icon" href="/images/favicon.ico"/>
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/half-slider.css" rel="stylesheet">
-
-        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
-    </head>
-
-    <body>
-        @include('includes.navbar')
-        <div class="container">
-            @yield('content')
-        </div>
-    </body>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+</body>
 </html>

@@ -1,0 +1,43 @@
+﻿create database whiskeyDatabase;
+use whiskeyDatabase;
+
+create table whiskies
+(
+	Id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	Brand varchar (44),
+	Product varchar (44),
+	Year int (44),
+	Description varchar (1000),
+	Price double NOT NULL,
+	Picture varchar(256) DEFAULT NULL
+);
+
+
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Jameson", "12 Year Old", 2004, "Matured in a combination of Oloroso sherry casks and seasoned bourbon barrels, Jameson 12 Year Old is an intense but smoothly balanced whiskey. Some things can't be rushed, and the patience allowed for this whiskey delivers robust notes of spice, sherry and toasted fruit that will appease the most demanding palate.", 66.00, "images/jameson12yearold.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Jameson", "Black Barrel", 2015, "Jameson Black Barrel is a tribute to the cooper’s method of charring barrels. Charring is an age old method for invigorating barrels, but these days we use double charred barrels by choice rather than through necessity. Time spent maturing in these barrels lends this whiskey intensified notes of vanilla sweetness and caramel, alongside toasted wood, fruit, and warm spice. A triple distilled blend of small batch grain and traditional Irish pot still whiskeys, Jameson Black Barrel reveals untold richness and complexity. Every barrel contains secrets; the trick is coaxing them out.", 55.00, "images/jamesonblackbarrel.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Bushmills", "Black Bush", 2013, "Bushmills Black Bush™ Irish Whisky is a rich, dark blend (hence the name), the result of maturing for several years in Spanish Oloroso sherry casks and sweet bourbon barrels. The 80% malt premium whisky floats across the tongue to deliver dark, velvety fruity notes.", 50.00, "images/bushmillsblackbush.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Bushmills", "10 Year Old", 2005, "Made from 100% malted barley, Bushmills™ 10 Year-Old Single Malt Irish Whisky is the first of the single malts, and one that will leave an exceptionally smooth finish. The distinctive Bushmills light fruity aroma travels over the lip of your tumbler to deliver 10 years of maturation mostly in bourbon seasoned barrels.", 60.00, "images/bushmills10yearold.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Powers", "Gold Label", 2011, "Powers Gold Label is a complex spice and honeyed taste experience. Every drop is triple distilled, with more cut from the top and tail of the second and third Pot Still charges. This means only the purest heart of the distillate is captured. This is then left to mature in select American oak casks which allow our distillate driven style to shine. Powers Gold Label is blended with the finest grain whiskey, also exclusively matured in American oak casks. Finally, a proprietary Powers  production technique enables a non-chill filtration at 40% ABV – unique amongst Irish whiskey.", 31.95, "images/powersgoldlabel.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Powers", "Johns Lane", 2003, "This expression celebrates the origin of the Powers whiskey tradition and provides a glimpse of the whiskey style that made Powers famous. Using a pot still distillate which is true to the original st yle of John's Lane, the whiskey has been maturedfor not less than 12 years, mainly in first fill American bourbon casks, with a small contribution of distillate which has been matured in Oloroso sherr y butts.The result is a Single Pot Still whiskey of outstanding flavour and complexity which provides a fitting tribute to the spiritual home of one of Ireland's most loved whiskeys.", 70.00, "images/powersjohnslane.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Teeling", "Single Malt", 2016, "Made from 100% Malted Barley from a range of different ages including Malt whiskey distilled in 1991, Teelings aim to produce the most flavoursome Irish Single Malt based using their innovative maturation/finishing techniques while retaining the distinctive Irish smoothness.Matured in five different wine casks including Sherry, Port, Madeira, White Burgundy and Cabernet Sauvignon. Winner of a gold medal at both the World Whiskies Awards 2015 and the San Francisco World Spirits Competition 2015.", 45.00, "images/teelingsinglemalt.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Teeling", "24 Year Old", 1990, "The Teeling 33 Year Old Single Malt bottling consists of some of the oldest Irish Single Malt ever bottled making this an extremely rare release of Irish Whiskey. Distilled in 1983 and aged exclusively in two ex-bourbon barrels which after 33 years of maturation produced only 275 bottles at an alcohol strength of 42.9% straight out of the cask. To match its rarity, this historic bottling of Irish Whiskey produces a truly unique taste experience from its complex floral nose, to its deep layered flavours as a result of its 33 year journey and a long luxurious finish without being over oaked.", 300.00, "images/teeling24yearold.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Jack Daniels", "Gentleman Jack", 2016, "Just like Jack Daniel's Tennessee Whiskey and Jack Daniel's Single Barrel, Gentleman Jack is charcoal mellowed before going into the barrel. Gentleman Jack, however, receives an additional blessing when it is charcoal mellowed again after reaching maturity - making it the only whiskey in the world to be charcoal mellowed twice, giving it ultimate smoothness. Gentleman Jack is full-bodied with fruit and spices, and its finish is silky, warm, and pleasant.", 40.00, "images/jackdanielsgentlemanjack.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Jack Daniels", "Honey", 2016, "As a family business we ensure a warm and friendly service whether you shop in store or online. We strive to create an environment of trust, an experience to enjoy and a brand to recommend. O’Brien’s delivers an extensive range of wines beers and spirits, some world famous others small and bespoke, all the best quality and all at the best value. Our staff are knowledgeable and enthusiastic about our range and strive to understand and exceed your expectations.", 27.00, "images/jackdanielshoney.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Jim Beam", "Devils Cut", 2015, "As whisky ages and matures, a portion is lost from the barrel due to evaporation. This is referred to as the 'Angel's Share'. During aging some liquid is also absorbed into the barrel where it stays after the barrel is emptied. This, Jim Beam claim, is the 'devil's cut' and they have developed a process of extracting it. This is then blended with their extra-aged bourbon to 45% Abv.", 35.50, "images/jimbeamdevilscut.jpg");
+insert into whiskies (Brand, Product, Year, Description, Price, Picture) values ("Jim Beam", "Double Oak", 2014, "Double Oak is a whiskey to rival any other. It is first aged in charred American white oak barrels, it is then poured into another freshly charred barrel to mature a second time. The added interaction with the oak wood results in a liquid intense in flavour and exceptionally smooth to taste.", 35.00, "images/jimbeamdoubleoak.jpg");
+
+//insert into cars (Id, Make, Model) values (1, "Volkwagen", "Passat");
+
+insert into whiskies (Brand, Product, Year, Description, Price) values ("Powers", "Old Man Rubbish", 2015, "Matured in a combination of Oloroso sherry casks and seasoned bourbon barrels, Jameson 12 Year Old is an intense but smoothly balanced whiskey. Some things can't be rushed, and the patience allowed for this whiskey delivers robust notes of spice, sherry and toasted fruit that will appease the most demanding palate.", 55.00);
+
+
+////////////////////////////////////////////////////////////////////////////////
+USERS TABLE
+///////////////////////////////////////////////////////////////////////////////
+
+CREATE TABLE `whiskeydatabase`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+ created_at DATETIME, updated_at DATETIME, PRIMARY KEY (`id`));

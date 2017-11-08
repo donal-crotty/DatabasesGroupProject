@@ -28,3 +28,6 @@ Route::get('/contact', 'PagesController@contact');
 // Route::get('/users/{id}/{name}', function ($id, $name) {
 //     return 'this is user '.$id. ' with a name of '.$name;
 // });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
