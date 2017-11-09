@@ -1,6 +1,6 @@
-@extends('layouts.app')
 @extends('includes.header')
-@section('content')
+@extends('layouts.app')
+<!-- @section('content') -->
 
     <!-- Half Page Image Background Carousel Header -->
 <header id="myCarousel" class="carousel slide">
