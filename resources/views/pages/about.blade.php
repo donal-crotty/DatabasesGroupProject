@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@extends('includes.header')
 @section('content')
     <!-- Half Page Image Background Carousel Header -->
     <header id="myCarousel" class="carousel slide">
@@ -41,29 +42,29 @@
         </a>
     </header>
     <!-- Page Content -->
-    <section>  
+    <section>
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-12">
                     <h1>ABOUT US</h1>
-                    <p>View the finest whiskies the world has to offer with 
-                        our up-to-date database. 
+                    <p>View the finest whiskies the world has to offer with
+                        our up-to-date database.
                     </p>
                 </div>
             </div>
             <hr>
         </div>
         <div></div>
-       
+
         <script src="js/angularjs.js"></script>
 
-        <div class="container"> 
+        <div class="container">
             <div class="row"
-            <div ng-view> </div>    
+            <div ng-view> </div>
         </div>
     </div>
-    
+
         <!-- featured images -->
         <div class="row">
             <div class="col-lg-12">

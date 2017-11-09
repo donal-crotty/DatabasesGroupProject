@@ -1,5 +1,7 @@
 @extends('layouts.app')
+@extends('includes.header')
 @section('content')
+
     <!-- Half Page Image Background Carousel Header -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -41,31 +43,31 @@
         </a>
     </header>
     <!-- Page Content -->
-    <section>  
+    <section>
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-12">
                     <h1>The world's finest whiskey, in the eyes of the Cooper.</h1>
-                    <p>View the finest whiskies the world has to offer with 
-                        our up-to-date database. 
+                    <p>View the finest whiskies the world has to offer with
+                        our up-to-date database.
                     </p>
                 </div>
             </div>
             <hr>
         </div>
         <div></div>
-       
+
         <script src="js/angularjs.js"></script>
 
-        <div class="container"> 
+        <div class="container">
             <div class="row"
-            <div ng-view> </div>    
+            <div ng-view> </div>
         </div>
     </div>
-    <div class="container">  
-        <br />  
-        <h2 align="center">Scroll down to search our database.</h2><br />  
+    <div class="container">
+        <br />
+        <h2 align="center">Scroll down to search our database.</h2><br />
         <!--tab layout-->
         <div class="well">
             <!--Home Tab-->
@@ -99,8 +101,8 @@
                                 <th>Year</th>
                                 <th>Description</th>
                                 <th>Price</th>
-                                <th>More Info & Edit</th>                                            
-                            </tr> 
+                                <th>More Info & Edit</th>
+                            </tr>
                             <tbody id="table_body">
                             </tbody>
                         </table>
@@ -121,7 +123,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <!--Edit whiskey modal-->
                     <div class="modal fade" id="editModal" role="dialog">
                         <div class="modal-dialog">
@@ -161,10 +163,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-sm-1">Price:</label>    
+                                            <label class="control-label col-sm-1">Price:</label>
                                             <div class="col-sm-10">
                                                 <input class="form-control" type="text" id="price" name="price" required/>
-                                            </div>   
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-1">Description:</label>
@@ -186,7 +188,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>

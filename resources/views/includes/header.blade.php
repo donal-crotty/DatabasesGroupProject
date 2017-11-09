@@ -20,7 +20,7 @@
 
     <!-- Datatable -->
     <link href="{{ asset('/css/jquery.DataTables.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('/css/dataTables.bootstrap.css') }}" rel="stylesheet">    
+    <link href="{{ asset('/css/dataTables.bootstrap.css') }}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,15 +37,13 @@
     <script src="{{ asset('/js/angularjs.js') }}"></script>
 
     <!-- <link href="css/datatableCss.css" rel="stylesheet">-->
-    <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js') }}"></script>
-    <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js') }}"></script>
 
 </head>
 
 <body id="page-top">
 <!--     <nav class="navbar navbar-default">
       <div class="container-fluid">
-               
+
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -54,26 +52,24 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/"><img alt="Brand" src="{{asset('/images/logo.png')}}" class="img-brand"></a>
-        </div>      
+        </div>
       </div>
   </nav> -->
 
 
 <!--     <div class="content-div">
-     
+
     </div>
     <div class="clearfix"></div>   -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ asset('/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('/js/bootstrap.min.js') }}"></script> 
+    <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
     <!-- REST API JS for datatable -->
-    <script src="{{ asset('/js/main.js') }}"></script> 
-    
-    
+    <script src="{{ asset('/js/main.js') }}"></script>
+
+
 
 
 </body>
 </html>
-
-
