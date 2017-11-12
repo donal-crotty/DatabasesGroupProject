@@ -26,15 +26,19 @@ class HomeController extends Controller
         return view('home');
     }
     public function about(){
-
-        return view('pages.about');
+        $title = "About Page";
+        return view('pages.about')->with('title', $title);
     }
-    public function products(){
-
-        return view('pages.products');
+    public function posts(){
+        $title = "Posts Page";
+        return view('pages.posts')->with('title', $title);
+    }
+    public function comments(){
+        $title = "Comments Page";
+        return view('pages.comments')->with('title', $title);
     }
     public function contact(){
-
-        return view('pages.contact');
+        $title = "Contact Page";
+        return view('pages.contact')->with('title', $title);
     }
 }

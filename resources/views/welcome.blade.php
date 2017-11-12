@@ -50,7 +50,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>The world's finest whiskey, in the eyes of the Cooper.</h1>
+                    <h1>*Welcome Page*  The world's finest whiskey, in the eyes of the Cooper.</h1>
                     <p>View the finest whiskies the world has to offer with
                         our up-to-date database.
                     </p>
@@ -58,15 +58,7 @@
             </div>
             <hr>
         </div>
-        <div></div>
-
-
-        <div class="container">
-            <div class="row"
-            <div ng-view> </div>
-        </div>
-    </div>
-    <div class="container">
+    {{--  <div class="container">
         <br />
         <h2 align="center">Scroll down to search our database.</h2><br />
         <!--tab layout-->
@@ -192,7 +184,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  --}}
         <!-- featured images -->
         <div class="row">
             <div class="col-lg-12">
@@ -221,28 +213,4 @@
 </div>
 </section>
 
-
-
-
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <hr>
-                <p>Copyright &copy; The Cooper's Stash 2016</p>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-</footer>
-<!-- /.container -->
-
-<!-- Script to Activate the Carousel -->
-<script>
-    $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        })
-    </script>
 @endsection

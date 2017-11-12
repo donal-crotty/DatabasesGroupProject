@@ -16,9 +16,7 @@
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('images/header_barrels1.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>The
-
-                     Home of Whiskey </h2>
+                    <h2>The Home of Whiskey </h2>
                 </div>
             </div>
             <div class="item">
@@ -50,7 +48,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>The world's finest whiskey, in the eyes of the Cooper.</h1>
+                    <h1>*Home Page, You have logged in* The world's finest whiskey, in the eyes of the Cooper.</h1>
                     <p>View the finest whiskies the world has to offer with
                         our up-to-date database.
                     </p>
@@ -58,16 +56,9 @@
             </div>
             <hr>
         </div>
-        <div></div>
-
-
-        <div class="container">
-            <div class="row"
-            <div ng-view> </div>
-        </div>
-    </div>
-    <div class="container">
-        <br />
+   
+     <div class="container">
+       {{--  <br />
         <h2 align="center">Scroll down to search our database.</h2><br />
         <!--tab layout-->
         <div class="well">
@@ -192,7 +183,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  --}}
         <!-- featured images -->
         <div class="row">
             <div class="col-lg-12">
@@ -220,25 +211,6 @@
     </div>
 </div>
 </section>
-
-
-
-
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <hr>
-                <p>Copyright &copy; The Cooper's Stash 2016</p>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-</footer>
-<!-- /.container -->
-
 <!-- Script to Activate the Carousel -->
 <script>
     $('.carousel').carousel({

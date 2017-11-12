@@ -1,120 +1,59 @@
-@extends('layouts.app')
-@extends('includes.header')
-@section('content')
-    <!-- Half Page Image Background Carousel Header -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('images/header_barrels1.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>The Home of Whiskey </h2>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('images/header_barrels2.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>Knowledge from our industry professionals</h2>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('images/header_barrels3.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>The Cooper's Secret stash, Coming soon</h2>
-                </div>
-            </div>
-        </div>
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
-    <!-- Page Content -->
-    <section>
-        <div class="container">
+@extends('layouts.app') @extends('includes.header') @section('content')
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>ABOUT US</h1>
-                    <p>View the finest whiskies the world has to offer with
-                        our up-to-date database.
-                    </p>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div></div>
+<!-- Page Content -->
+<section>
+	<div class="container">
 
-        <script src="js/angularjs.js"></script>
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>About Us</h1>
+				<p>View the finest whiskies the world has to offer with our up-to-date database.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at lacus a leo sodales lacinia ac in risus. In hac habitasse
+					platea dictumst. Donec molestie, nunc vitae lobortis scelerisque, ante mauris lacinia dolor, in efficitur purus lacus
+					sit amet ligula. Integer tincidunt purus eu vehicula pretium. Ut id risus malesuada, accumsan nunc nec, lacinia nisl.
+					Donec lectus metus, ullamcorper a volutpat et, ultrices nec urna. Phasellus ut scelerisque tellus, vitae ultricies libero.
+					Mauris condimentum massa ut lectus malesuada, non aliquet urna dignissim. Praesent facilisis viverra dapibus. Class
+					aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus
+					et magnis dis parturient montes, nascetur ridiculus mus. Sed vel dapibus libero, quis lobortis elit. Pellentesque feugiat
+					turpis dolor, tempus faucibus eros tincidunt eget. In non augue eu eros porta commodo vel a leo.
+				</p>
+				<p>Aliquam nec scelerisque ligula, sit amet rhoncus arcu. Vivamus vitae lectus porttitor, dapibus lacus id, ullamcorper
+					enim. Proin eget augue turpis. Etiam ac nunc tortor. Maecenas at pulvinar sem, nec ullamcorper ante. Duis convallis
+					bibendum arcu, ut sagittis nunc fringilla at. Vestibulum a pretium risus. Cras aliquet porttitor lacus in ullamcorper.
+					Quisque eu neque ac odio feugiat faucibus eu sit amet libero. Morbi ultrices, dui a ornare posuere, felis tortor pharetra
+					diam, eget porta neque arcu vitae arcu. Nulla facilisi. Quisque mattis tincidunt ligula, et tempor nulla ornare non.
+					Donec neque est, commodo ac felis eu, porttitor finibus eros. Nulla facilisi.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header">Featured Whiskies</h2>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- featured images -->
 
-        <div class="container">
-            <div class="row"
-            <div ng-view> </div>
-        </div>
-    </div>
-
-        <!-- featured images -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Featured Whiskies</h2>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
-            </div>
-        </div>
-    </div>
-</div>
+	</div>
+	</div>
 </section>
-
-
-
-
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <hr>
-                <p>Copyright &copy; The Cooper's Stash 2016</p>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-</footer>
-<!-- /.container -->
-
-<!-- Script to Activate the Carousel -->
-<script>
-    $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        })
-    </script>
 @endsection
