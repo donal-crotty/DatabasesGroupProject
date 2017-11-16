@@ -48,15 +48,21 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>*Home Page, You have logged in* The world's finest whiskey, in the eyes of the Cooper.</h1>
+                    <h1>The world's finest whiskey, in the eyes of the Cooper.</h1>
                     <p>View the finest whiskies the world has to offer with
                         our up-to-date database.
                     </p>
+                     @if (Auth::user()->user_type=="admin")
+                     <h1>ADMIN IS LOGGED IN</h1>
+                     @else
+                     <h1>USER IS LOGGED IN</h1>
+                     @endif
+                     <p>
                 </div>
             </div>
             <hr>
         </div>
-   
+
      <div class="container">
        {{--  <br />
         <h2 align="center">Scroll down to search our database.</h2><br />

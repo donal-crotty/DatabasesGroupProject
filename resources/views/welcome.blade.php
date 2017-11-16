@@ -16,9 +16,7 @@
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('images/header_barrels1.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>The
-
-                     Home of Whiskey </h2>
+                    <h2>The Home of Whiskey </h2>
                 </div>
             </div>
             <div class="item">
@@ -50,7 +48,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>*Welcome Page*  The world's finest whiskey, in the eyes of the Cooper.</h1>
+                    <h1>The world's finest whiskey, in the eyes of the Cooper.</h1>
                     <p>View the finest whiskies the world has to offer with
                         our up-to-date database.
                     </p>
