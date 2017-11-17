@@ -27,6 +27,7 @@
                         <input type="file" class="form-control-file" id="image">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
+                    {{ csrf_field() }}
                 </form>  
                 @else
                     <h1>Read some of Our Latest Whiskey Reviews</h1>

@@ -41,3 +41,16 @@ CREATE TABLE `whiskeydatabase`.`users` (
   `password` VARCHAR(255) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
  created_at DATETIME, updated_at DATETIME, PRIMARY KEY (`id`));
+
+CREATE TABLE `whiskeydatabase`.`posts` (
+  	`id` INT NOT NULL AUTO_INCREMENT,
+  	`title` VARCHAR(191) NOT NULL,
+  	`body` VARCHAR(255) NOT NULL,
+	`created_at` TIMESTAMP, 
+	`updated_at` TIMESTAMP, 
+	`image` VARCHAR(100) NOT NULL,
+	`userId` INT,
+		PRIMARY KEY (`id`)
+);
+
+*userId will be a Foreign key to id in users table
