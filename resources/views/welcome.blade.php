@@ -56,8 +56,8 @@
             </div>
             <hr>
         </div>
-    {{--  <div class="container">
-        <br />
+    <div class="container">
+      {{--    <br />
         <h2 align="center">Scroll down to search our database.</h2><br />
         <!--tab layout-->
         <div class="well">

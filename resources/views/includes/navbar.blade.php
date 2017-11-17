@@ -11,6 +11,10 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     The Cooper's Stash
                 </a>
+                @elseif (Auth::user()->user_type=="admin")
+                <a class="navbar-brand" href="{{ url('/dashboard') }}">
+                    The Cooper's Stash
+                </a>
                 @else
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     The Cooper's Stash
@@ -29,8 +33,12 @@
                             <li><a href="about">About</a></li>
                             <li><a href="posts">Posts</a></li>
                             <li><a href="contact">Contact</a></li>
-                        @else 
-                            {{--  <li><a href="home">Home</a></li>  --}}
+                        @elseif (Auth::user()->user_type=="admin")
+                            <li><a href="about">About</a></li>
+                            <li><a href="posts">Posts</a></li>                           
+                            <li><a href="comments">Comments</a></a></li>
+                            <li><a href="dashboard">Dashboard</a></a></li>
+                        @else
                             <li><a href="about">About</a></li>
                             <li><a href="posts">Posts</a></li>
                             <li><a href="comments">Comments</a></a></li>

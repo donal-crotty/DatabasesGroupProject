@@ -12,12 +12,24 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/half-slider.css') }}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <!-- Datatable -->
+    <link href="{{ asset('/css/jquery.DataTables.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/dataTables.bootstrap.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('/js/jquery.js') }}"></script>
+    <script src="{{ asset('/js/jquery.dataTables.js') }}"></script>
 </head>
 <body>
-    <div id="app">
         @include('includes.navbar')
-        @yield('content')
-    </div>
+        <div class="container">
+            @include('includes.messages')
+            @yield('content')
+        </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

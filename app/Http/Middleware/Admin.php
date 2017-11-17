@@ -15,13 +15,12 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-
-        if ( Auth::check() && Auth::user()->isAdmin() )
+        if (Auth::user()->user_type=="admin")
         {
             return $next($request);
         }
 
-        return redirect('adminDashboard');
+        return redirect('/dashboard');
 
     }
 }
