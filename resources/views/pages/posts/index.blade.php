@@ -16,15 +16,15 @@
                  <form action="{{ action('PostsController@store') }}" method="POST">
                     <div class="form-group">
                         <label>Title</label>
-                        <input type="text" class="form-control" id="title" placeholder="Skulling Whiskey is....">
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Skulling Whiskey is....">
                     </div>
                     <div class="form-group">
                         <label>Body</label>
-                        <textarea class="form-control" id="body" rows="3"></textarea>
+                        <textarea class="form-control" id="body" name="body" rows="3"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Cover Image</label>
-                        <input type="file" class="form-control-file" id="image">
+                        <input type="file" class="form-control-file" id="image" name="image">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                     {{ csrf_field() }}

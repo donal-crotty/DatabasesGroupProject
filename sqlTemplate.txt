@@ -35,22 +35,17 @@ insert into whiskies (Brand, Product, Year, Description, Price) values ("Powers"
 USERS TABLE
 ///////////////////////////////////////////////////////////////////////////////
 
-CREATE TABLE `whiskeydatabase`.`users` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(255) NOT NULL,
-  `password` VARCHAR(255) NOT NULL,
-  `email` VARCHAR(255) NOT NULL,
- created_at DATETIME, updated_at DATETIME, PRIMARY KEY (`id`));
-
-CREATE TABLE `whiskeydatabase`.`posts` (
-  	`id` INT NOT NULL AUTO_INCREMENT,
-  	`title` VARCHAR(191) NOT NULL,
-  	`body` VARCHAR(255) NOT NULL,
-	`created_at` TIMESTAMP, 
-	`updated_at` TIMESTAMP, 
-	`image` VARCHAR(100) NOT NULL,
-	PRIMARY KEY (`id`)
-);
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `remember_token` varchar(255) DEFAULT NULL,
+  `user_type` varchar(45) NOT NULL DEFAULT 'user',
+  PRIMARY KEY (`id`)
+) 
 
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -62,5 +57,8 @@ CREATE TABLE `posts` (
   `userId` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) 
+
+**LINK TO LARAVEL DOCS FOR CREATING TABLES**
+https://laravel.com/docs/5.5/migrations
 
 *userId will be a Foreign key to id in users table
