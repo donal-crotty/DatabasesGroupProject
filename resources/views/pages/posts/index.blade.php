@@ -11,6 +11,17 @@
                     <hr>
                     <p>Here are our latest posts about Ireland's Finest Whiskies.
                     </p>
+                    @if(count($posts)> 1)
+                        @foreach($posts as $post)
+                        <div class="well">
+                        <h3><a href="posts/{{$post->id}}">{{$post->title}}</a></h3>
+                        <small>Written on {{$post->created_at}}</small>
+                        </div>
+                        @endforeach
+                        {{--  {{$posts->links()}}  --}}
+                    @else 
+                    <p>No posts found.</p> 
+                    @endif
                 @elseif (Auth::user()->user_type=="admin")
                  <h1>Create Post</h1>
                  <form action="{{ action('PostsController@store') }}" method="POST">
@@ -29,6 +40,19 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                     {{ csrf_field() }}
                 </form>  
+                <hr>
+                <h2>Created Posts</h2>
+                @if(count($posts)> 1)
+                        @foreach($posts as $post)
+                        <div class="well">
+                        <h3><a href="posts/{{$post->id}}">{{$post->title}}</a></h3>
+                        <small>Written on {{$post->created_at}}</small>
+                        </div>
+                        @endforeach
+                        {{--  {{$posts->links()}}  --}}
+                    @else 
+                    <p>No posts found.</p> 
+                    @endif
                 @else
                     <h1>Read some of Our Latest Whiskey Reviews</h1>
                     <h4>Please let us know your opinions!</h2>
