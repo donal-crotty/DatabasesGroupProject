@@ -49,8 +49,18 @@ CREATE TABLE `whiskeydatabase`.`posts` (
 	`created_at` TIMESTAMP, 
 	`updated_at` TIMESTAMP, 
 	`image` VARCHAR(100) NOT NULL,
-	`userId` INT,
-		PRIMARY KEY (`id`)
+	PRIMARY KEY (`id`)
 );
+
+CREATE TABLE `posts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(191) NOT NULL,
+  `body` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `image` varchar(100) NOT NULL,
+  `userId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) 
 
 *userId will be a Foreign key to id in users table
