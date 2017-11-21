@@ -42,7 +42,7 @@
                 </form>  
                 <hr>
                 <h2>Created Posts</h2>
-                @if(count($posts)> 1)
+                @if(count($posts)>= 1)
                         @foreach($posts as $post)
                         <div class="well">
                         <h3><a href="posts/{{$post->id}}">{{$post->title}}</a></h3>
@@ -58,7 +58,7 @@
                     <h4>Please let us know your opinions!</h2>
                     <h5>Upvote, Comment or Share our Posts</h3>
                     <hr>
-                    @if(count($posts)> 1)
+                    @if(count($posts)>= 1)
                         @foreach($posts as $post)
                         <div class="well">
                         <h3><a href="posts/{{$post->id}}">{{$post->title}}</a></h3>
