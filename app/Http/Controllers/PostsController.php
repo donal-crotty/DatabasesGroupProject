@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Comment;
 
 class PostsController extends Controller
 {
@@ -94,4 +95,16 @@ class PostsController extends Controller
     {
         //
     }
+
+    // public function comment(Request $request){
+    //     $this -> validate($request, [
+    //         'comment' => 'required'
+    //     ]);
+
+    //     $comment = new Comment;
+    //     $comment -> comment = $request->input('comment');
+    //     $comment -> save();
+
+    //     return redirect('/comments')->with('success', 'Comment Created!'); 
+    // }
 }

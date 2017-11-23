@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+use App\Comment;
+use \Auth;
 
 class CommentsController extends Controller
 {
@@ -13,7 +16,8 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+        $comments = Comment::all();
+        return view('pages.posts.index')->with('comments', $comments);
     }
 
     /**
@@ -34,7 +38,18 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this -> validate($request, [
+            'comment' => 'required'
+        ]);
+        
+        $comment = new Comment;
+        $comment -> comment = $request->input('comment');
+        $comment -> userId = Auth::id();
+        $comment -> save();
+
+        $postId = $request ->input('postId');
+
+        return Redirect::route('post/show/{postId}',array('postId' => $postId))->with('success', 'Comment Created!');
     }
 
     /**
@@ -45,7 +60,8 @@ class CommentsController extends Controller
      */
     public function show($id)
     {
-        //
+       //$comments = Comment::find($id);
+       //return view('pages.posts.show')->with('comment', $comments);
     }
 
     /**
@@ -81,4 +97,17 @@ class CommentsController extends Controller
     {
         //
     }
+
+    // public function comment(Request $request){
+    //     $this -> validate($request, [
+    //         'comment' => 'required'
+    //     ]);
+
+    //     $comment = new Comment;
+    //     $comment -> comment = $request->input('comment');
+    //     $comment -> userId = Auth::id();
+    //     $comment -> save();
+
+    //     return redirect('/comments')->with('success', 'Comment Created!'); 
+    // }
 }

@@ -27,3 +27,4 @@ Route::get('/comments', 'PagesController@comments');
 Route::get('/contact', 'HomeController@contact');
 
 Route::resource('/posts', 'PostsController');
+Route::resource('/comments', 'CommentsController');
