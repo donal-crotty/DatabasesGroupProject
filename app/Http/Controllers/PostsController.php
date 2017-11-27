@@ -38,12 +38,14 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $this -> validate($request, [
-            'title' => 'required',
+            'brand' => 'required',
+            'product' => 'required',
             'body' => 'required'
         ]);
 
         $post = new Post;
-        $post -> title = $request->input('title');
+        $post -> brand = $request->input('brand');
+        $post -> product = $request->input('product');
         $post -> body = $request->input('body');   
         $post -> save();
 

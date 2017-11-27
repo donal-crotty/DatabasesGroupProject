@@ -36,12 +36,12 @@
             @elseif (Auth::user()->user_type=="admin")
             <li><a href="{{ url('/about') }}">About</a></li>
             <li><a href="{{ url('/posts') }}">Posts</a></li>                           
-            <li><a href="{{ url('/comments') }}">Comments</a></a></li>
-            <li><a href="{{ url('/dashboard') }}">Dashboard</a></a></li>
+            <li><a href="{{ url('/comments') }}">Comments</a></li>
+            <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
             @else
             <li><a href="{{ url('/about') }}">About</a></li>
             <li><a href="{{ url('/posts') }}">Posts</a></li>
-            <li><a href="{{ url('/comments') }}">Comments</a></a></li>
+            <li><a href="{{ url('/comments') }}">Comments</a></li>
             <li><a href="{{ url('/contact') }}">Contact</a></li>
             @endif
         </ul>
