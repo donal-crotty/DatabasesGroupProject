@@ -12,7 +12,7 @@
             The Cooper's Stash
         </a>
         @elseif (Auth::user()->user_type=="admin")
-        <a class="navbar-brand" href="{{ url('/dashboard') }}">
+        <a class="navbar-brand" href="{{ url('/home') }}">
             The Cooper's Stash
         </a>
         @else
