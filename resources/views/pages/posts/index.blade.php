@@ -73,9 +73,8 @@
                     @else 
                     <p>No posts found.</p> 
                     @endif
-                @endif
                 </div>
             </div>
             <hr>
         </div>
-@endsection
+        @endsection
