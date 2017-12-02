@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Comment;
@@ -17,7 +17,7 @@ class CommentsController extends Controller
     public function index()
     {
         $comments = Comment::all();
-        return view('pages.posts.index')->with('comments', $comments);
+        return view('pages.posts.show')->with('comments', $comments);
     }
 
     /**
@@ -49,7 +49,8 @@ class CommentsController extends Controller
 
         $postId = $request ->input('postId');
 
-        return Redirect::route('post/show/{postId}',array('postId' => $postId))->with('success', 'Comment Created!');
+
+        return redirect()->back();
     }
 
     /**
@@ -62,6 +63,16 @@ class CommentsController extends Controller
     {
        //$comments = Comment::find($id);
        //return view('pages.posts.show')->with('comment', $comments);
+        // Validat the ID
+        if($id == '' || !is_numeric($id)){
+            // Alert User of invalid ID
+        }
+
+        // Valid id
+        $post =  Post::find($id);
+        //$cows_tag = $cow->tag_no;
+        //$calves = Calf::where('cows_tag' ,$cows_tag )->get();
+        return view('posts.show', compact('post'));
     }
 
     /**

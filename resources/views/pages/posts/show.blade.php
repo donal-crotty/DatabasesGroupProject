@@ -5,8 +5,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                   
-                    <h1>{{$post->title}}</h1>
+                
+                     <h1>{{$post->brand}}</h1>
+                     <h2>{{$post->product}}</h2>
                     <div>
                         {{$post -> body}}
                     </div>
@@ -21,6 +22,8 @@
                         <div class="form-group">
                             <br>
                             <input type="hidden" name="postId" value="{{$post->id}}"/>
+                
+                            
                             <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" >Submit</button>
@@ -29,11 +32,17 @@
                 </div>
                 {{--  <div class="col-lg-12">
                     <div>
-                        {{$comments -> comment}}
+                       @if(count($comments)>= 1)
+                            @foreach($comments as $comment)
+                            <div class="well">
+                                <p>{{$comment->comment}}</p>
+                                <small>Written on {{$comment->created_at}}</small>
+                            </div>
+                            @endforeach
+                        @else 
+                            <p>No comments found.</p> 
+                        @endif
                     </div>
-                    <hr>
-                    <small>Written on {{$comments->created_at}}</small>
-                     <hr>
                 </div>  --}}
             </div>
         </div>

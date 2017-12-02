@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Comment;
+use View;
+use DB;
 
 class PostsController extends Controller
 {
@@ -38,12 +40,14 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $this -> validate($request, [
-            'title' => 'required',
-            'body' => 'required'
+            'brand' => 'required',
+            'product' => 'required',
+            'body' => 'required',
         ]);
-
+        DB::select('CALL checkAndInsertPosts()');
         $post = new Post;
-        $post -> title = $request->input('title');
+        $post -> brand = $request->input('brand');
+        $post -> product = $request->input('product');
         $post -> body = $request->input('body');   
         $post -> save();
 
@@ -59,7 +63,8 @@ class PostsController extends Controller
     public function show($id)
     {
        $post = Post::find($id);
-       return view('pages.posts.show')->with('post', $post);
+       $comment = Comment::where('id', $id)->first();
+       return View::make('pages.posts.show', compact($post,$comment));
     }
 
     /**

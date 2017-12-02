@@ -24,15 +24,19 @@
         <script src="{{ asset('/js/jquery.js') }}"></script>
         <script src="{{ asset('/js/jquery.dataTables.js') }}"></script>
     </head>
-    <body>
-            @include('includes.navbar')
-            <div class="container">
-                @include('includes.messages')
-                @yield('content')
-            </div>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+</head>
+<body>
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}"></script>
-        @include('includes.footer')
-    </body>
+    @include('includes.navbar')
+    <div class="container">
+        @include('includes.messages')
+        @yield('content')
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    @include('includes.footer')
+</body>
 </html>

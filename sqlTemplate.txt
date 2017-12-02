@@ -49,8 +49,9 @@ CREATE TABLE `users` (
 
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(191) NOT NULL,
-  `body` varchar(255) NOT NULL,
+  `brand` varchar(255) NOT NULL,
+  `product` varchar(255) NOT NULL,
+  `body` varchar(1000) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `image` varchar(100) NOT NULL,
@@ -62,3 +63,47 @@ CREATE TABLE `posts` (
 https://laravel.com/docs/5.5/migrations
 
 *userId will be a Foreign key to id in users table
+
+
+
+//////////////// STORE PROCEDURES ///////////////
+CHECK IF USER ALREADY EXISTS
+-------------------------------------------------
+USE `whiskeydatabase`;
+DROP procedure IF EXISTS `USER_EXISTS`;
+
+DELIMITER $$
+USE `whiskeydatabase`$$
+CREATE PROCEDURE USER_EXISTS(IN GIVEN_USERNAME VARCHAR(255))
+BEGIN
+    SET @User_exists = 0;
+    SELECT 1 INTO @User_exists
+    FROM users
+    WHERE username = GIVEN_USERNAME;       
+    SELECT @User_exists;
+END ;$$
+
+DELIMITER ;
+
+-------------------------------------------------
+CHECK IF POSTS EXISTS BEFORE INSERTING NEW POST
+-------------------------------------------------
+USE `whiskeydatabase`;
+DROP procedure IF EXISTS `checkAndInsertPosts`;
+
+DELIMITER $$
+USE `whiskeydatabase`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `checkAndInsertPosts` (IN title varchar(255),IN body varchar(2000),
+IN created_at timestamp, IN updated_at timestamp, IN image varchar(100))
+BEGIN
+	SET @Post_exists = 0;
+	SELECT * FROM posts;
+    SELECT 1 INTO @Post_exists
+    FROM posts
+    WHERE title = title;
+    INSERT into posts (title,body,created_at,updated_at,image) values (title,body,created_at,updated_at,image);
+END$$
+
+DELIMITER ;
+
+--------------------------------------------------

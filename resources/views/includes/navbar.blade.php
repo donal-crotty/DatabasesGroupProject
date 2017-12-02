@@ -12,7 +12,7 @@
             The Cooper's Stash
         </a>
         @elseif (Auth::user()->user_type=="admin")
-        <a class="navbar-brand" href="{{ url('/dashboard') }}">
+        <a class="navbar-brand" href="{{ url('/home') }}">
             The Cooper's Stash
         </a>
         @else
@@ -30,19 +30,19 @@
 
         <ul class="nav navbar-nav">
             @if (Auth::guest())
-            <li><a href="about">About</a></li>
-            <li><a href="posts">Posts</a></li>
-            <li><a href="contact">Contact</a></li>
+             <li><a href="{{ url('/about') }}">About</a></li>
+             <li><a href="{{ url('/posts') }}">Posts</a></li>
+             <li><a href="{{ url('/contact') }}">Contact</a></li>
             @elseif (Auth::user()->user_type=="admin")
-            <li><a href="about">About</a></li>
-            <li><a href="posts">Posts</a></li>                           
-            <li><a href="comments">Comments</a></a></li>
-            <li><a href="dashboard">Dashboard</a></a></li>
+             <li><a href="{{ url('/about') }}">About</a></li>
+             <li><a href="{{ url('/posts') }}">Posts</a></li>                           
+             <li><a href="{{ url('/comments') }}">Comments</a></a></li>
+             <li><a href="{{ url('/dashboard') }}">Dashboard</a></a></li>
             @else
-            <li><a href="about">About</a></li>
-            <li><a href="posts">Posts</a></li>
-            <li><a href="comments">Comments</a></a></li>
-            <li><a href="contact">Contact</a></li>
+             <li><a href="{{ url('/about') }}">About</a></li>
+             <li><a href="{{ url('/posts') }}">Posts</a></li>
+             <li><a href="{{ url('/comments') }}">Comments</a></a></li>
+             <li><a href="{{ url('/contact') }}">Contact</a></li>
             @endif
         </ul>
         <!-- Right Side Of Navbar -->
