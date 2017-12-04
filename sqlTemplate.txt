@@ -3,13 +3,13 @@ use whiskeyDatabase;
 
 create table whiskies
 (
-	Id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	Brand varchar (44),
-	Product varchar (44),
-	Year int (44),
-	Description varchar (1000),
-	Price double NOT NULL,
-	Picture varchar(256) DEFAULT NULL
+Id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+Brand varchar (44),
+Product varchar (44),
+Year int (44),
+Description varchar (1000),
+Price double NOT NULL,
+Picture varchar(256) DEFAULT NULL
 );
 
 
@@ -36,28 +36,37 @@ USERS TABLE
 ///////////////////////////////////////////////////////////////////////////////
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  `remember_token` varchar(255) DEFAULT NULL,
-  `user_type` varchar(45) NOT NULL DEFAULT 'user',
-  PRIMARY KEY (`id`)
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`name` varchar(255) NOT NULL,
+`password` varchar(255) NOT NULL,
+`email` varchar(255) NOT NULL,
+`created_at` datetime DEFAULT NULL,
+`updated_at` datetime DEFAULT NULL,
+`remember_token` varchar(255) DEFAULT NULL,
+`user_type` varchar(45) NOT NULL DEFAULT 'user',
+PRIMARY KEY (`id`)
 ) 
 
 CREATE TABLE `posts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `brand` varchar(255) NOT NULL,
-  `product` varchar(255) NOT NULL,
-  `body` varchar(1000) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `image` varchar(100) NOT NULL,
-  `userId` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`brand` varchar(255) NOT NULL,
+`product` varchar(255) NOT NULL,
+`body` varchar(1000) NOT NULL,
+`created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+`updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+`image` varchar(100) NOT NULL,
+`userId` int(11) DEFAULT NULL,
+PRIMARY KEY (`id`)
 ) 
+
+create table `comments` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`comment` varchar(1000) NOT NULL,
+`created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+`updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+`userId` int(11),
+`postId` int(11)
+);
 
 **LINK TO LARAVEL DOCS FOR CREATING TABLES**
 https://laravel.com/docs/5.5/migrations
@@ -76,11 +85,11 @@ DELIMITER $$
 USE `whiskeydatabase`$$
 CREATE PROCEDURE USER_EXISTS(IN GIVEN_USERNAME VARCHAR(255))
 BEGIN
-    SET @User_exists = 0;
-    SELECT 1 INTO @User_exists
-    FROM users
-    WHERE username = GIVEN_USERNAME;       
-    SELECT @User_exists;
+SET @User_exists = 0;
+SELECT 1 INTO @User_exists
+FROM users
+WHERE username = GIVEN_USERNAME;       
+SELECT @User_exists;
 END ;$$
 
 DELIMITER ;
@@ -96,12 +105,12 @@ USE `whiskeydatabase`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `checkAndInsertPosts` (IN title varchar(255),IN body varchar(2000),
 IN created_at timestamp, IN updated_at timestamp, IN image varchar(100))
 BEGIN
-	SET @Post_exists = 0;
-	SELECT * FROM posts;
-    SELECT 1 INTO @Post_exists
-    FROM posts
-    WHERE title = title;
-    INSERT into posts (title,body,created_at,updated_at,image) values (title,body,created_at,updated_at,image);
+SET @Post_exists = 0;
+SELECT * FROM posts;
+SELECT 1 INTO @Post_exists
+FROM posts
+WHERE title = title;
+INSERT into posts (title,body,created_at,updated_at,image) values (title,body,created_at,updated_at,image);
 END$$
 
 DELIMITER ;

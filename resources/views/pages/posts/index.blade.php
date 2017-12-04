@@ -59,8 +59,8 @@
            @endif
            @else
            <h1>Read some of Our Latest Whiskey Reviews</h1>
-           <h4>Please let us know your opinions!</h2>
-               <h5>Upvote, Comment or Share our Posts</h3>
+           <h4>Please let us know your opinions!</h4>
+               <h5>Upvote, Comment or Share our Posts</h5>
                    <hr>
                    @if(count($posts)>= 1)
                    @foreach($posts as $post)
@@ -73,6 +73,7 @@
                     @else 
                     <p>No posts found.</p> 
                     @endif
+                  @endif
                 </div>
             </div>
             <hr>
