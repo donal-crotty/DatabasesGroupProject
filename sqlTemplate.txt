@@ -93,17 +93,14 @@ DROP procedure IF EXISTS `checkAndInsertPosts`;
 
 DELIMITER $$
 USE `whiskeydatabase`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `checkAndInsertPosts` (IN title varchar(255),IN body varchar(2000),
-IN created_at timestamp, IN updated_at timestamp, IN image varchar(100))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `checkAndInsertPosts`(IN brand varchar(255), IN product varchar(255), IN body varchar(2000),
+ IN created_at timestamp, IN updated_at timestamp,  image varchar(100))
 BEGIN
-	SET @Post_exists = 0;
-	SELECT * FROM posts;
-    SELECT 1 INTO @Post_exists
-    FROM posts
-    WHERE title = title;
-    INSERT into posts (title,body,created_at,updated_at,image) values (title,body,created_at,updated_at,image);
+	
+    INSERT into posts (brand, product, body, created_at, updated_at, image) values (brand, product, body, created_at, updated_at, image);
 END$$
 
 DELIMITER ;
+
 
 --------------------------------------------------

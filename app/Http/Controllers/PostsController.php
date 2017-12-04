@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Comment;
+use Auth;
 use View;
+use Carbon\Carbon;
 use DB;
 
 class PostsController extends Controller
@@ -44,12 +46,14 @@ class PostsController extends Controller
             'product' => 'required',
             'body' => 'required',
         ]);
-        DB::select('CALL checkAndInsertPosts()');
         $post = new Post;
-        $post -> brand = $request->input('brand');
-        $post -> product = $request->input('product');
-        $post -> body = $request->input('body');   
-        $post -> save();
+        $brand = $request->input('brand');
+        $product = $request->input('product');
+        $body = $request->input('body');
+        $created_at = Carbon::now()->toDateTimeString();
+        $updated_at = Carbon::now()->toDateTimeString();
+        $image = $request->input('image'); 
+        DB::select('CALL checkAndInsertPosts(?, ?, ?, ?, ?, ?)',[$brand, $product, $body, $created_at, $updated_at, $image ]);
 
         return redirect('/posts')->with('success', 'Post Created!');
     }
@@ -62,9 +66,10 @@ class PostsController extends Controller
      */
     public function show($id)
     {
+       $user_id = Auth::user()->id;
        $post = Post::find($id);
-       $comment = Comment::where('id', $id)->first();
-       return View::make('pages.posts.show', compact($post,$comment));
+       $comments = Comment::where('user_id', $user_id);
+       return view('pages.posts.show', compact('post' , 'comments'));
     }
 
     /**
@@ -78,7 +83,7 @@ class PostsController extends Controller
         //
     }
 
-    /**
+    /**s
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
