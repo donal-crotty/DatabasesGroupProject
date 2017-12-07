@@ -66,9 +66,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-       $user_id = Auth::user()->id;
+      
        $post = Post::find($id);
-       $comments = Comment::where('user_id', $user_id);
+       $comments = Comment::all()->where('postId', $id);
        return view('pages.posts.show', compact('post' , 'comments'));
     }
 

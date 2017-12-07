@@ -45,8 +45,9 @@ class CommentsController extends Controller
         $comment = new Comment;
         $comment -> comment = $request->input('comment');
         $comment -> userId = Auth::id();
+        $comment -> postId = $request->input('postId');
         $comment -> save();
-        $postId = $request ->input('postId');
+        
 
         return redirect()->back();
     }

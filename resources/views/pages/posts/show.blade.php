@@ -24,18 +24,18 @@
                             {{--  <input type="hidden" name="userId" value="{{$user->id}}"/>  --}}
                             <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" >Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                          {{ csrf_field() }}
                     </form>  
                 </div>
                 <div class="col-lg-12">
                     <div>
-                    
                        @if(count($comments)>= 1)
                             @foreach($comments as $comment)
                             <div class="well">
                                 <p>{{$comment->comment}}</p>
                                 <small>Written on {{$comment->created_at}}</small>
+                                {{--  <small>By {{$user->name}}</small>  --}}
                             </div>
                             @endforeach
                         @else 
