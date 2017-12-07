@@ -26,6 +26,7 @@ Route::get('/posts', 'HomeController@posts');
 Route::get('/comments', 'PagesController@comments');
 Route::get('/contact', 'HomeController@contact');
 Route::get('/show', 'ChartsController@showChartData');
+Route::get('/show-report', 'AdminController@show_users');
 
 Route::resource('/posts', 'PostsController');
 Route::resource('/comments', 'CommentsController');
