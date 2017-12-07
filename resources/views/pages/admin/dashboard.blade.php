@@ -27,13 +27,13 @@
 							</tr>
 
 							@foreach($users as $user)
-							 <tr>
-							 	<td>{{ $user->name }}</td>
-							 	<td>{{ $user->email }}</td>
-							 	<td>{{ $user->created_at }}</td>
-							 	<td>{{ $user->updated_at }}</td>
-							 	<td>{{ $user->user_type }}</td>
-							 </tr>
+							<tr>
+								<td>{{ $user->name }}</td>
+								<td>{{ $user->email }}</td>
+								<td>{{ $user->created_at }}</td>
+								<td>{{ $user->updated_at }}</td>
+								<td>{{ $user->user_type }}</td>
+							</tr>
 							@endforeach
 						</table>
 						@endif

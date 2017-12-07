@@ -25,6 +25,8 @@
     <script src="{{ asset('/js/jquery.js') }}"></script>
     <script src="{{ asset('/js/jquery.dataTables.js') }}"></script>
 
+    <script src="{{ asset('/js/chart_data.js') }}"></script>
+
 </head>
 
 <body id="page-top">

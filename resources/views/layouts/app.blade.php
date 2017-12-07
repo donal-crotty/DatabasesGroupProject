@@ -26,6 +26,7 @@
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
 </head>
 <body>
     @include('includes.navbar')
