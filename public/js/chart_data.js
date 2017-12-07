@@ -1,6 +1,6 @@
 // Create the pie drilldown chart
 function whiskeyChart(){
-  alert("called");
+  //alert("called");
   $.ajax({
     url:"http://localhost:8080/databases_project/public/show",
     type:"GET",
@@ -45,7 +45,7 @@ function whiskeyChart(){
       });
     },
     error:function(data){
-      alert('Failed');
+     // alert('Failed');
     }
   });
 }

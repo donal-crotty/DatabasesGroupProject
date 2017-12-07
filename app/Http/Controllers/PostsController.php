@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 use App\Post;
 use App\Comment;
 use Auth;
@@ -66,10 +67,18 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-      
+       $user = User::find($id);
        $post = Post::find($id);
        $comments = Comment::all()->where('postId', $id);
-       return view('pages.posts.show', compact('post' , 'comments'));
+
+       
+        //Get users name
+        foreach($comments as $i => $v){
+            $current_user = User::find($v['userId']);
+            $comments[$i]['user'] = $current_user['name'];
+        }
+        // var_dump($comments);die();
+       return view('pages.posts.show', compact('post' , 'comments', 'user'));
     }
 
     /**

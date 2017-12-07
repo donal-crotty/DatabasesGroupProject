@@ -17,7 +17,7 @@ class CommentsController extends Controller
     public function index()
     {
         $comments = Comment::all();
-        return view('pages.posts.show')->with('comments', $comments);
+        return view('pages.comments')->with('comments', $comments);
     }
 
     /**
@@ -60,18 +60,11 @@ class CommentsController extends Controller
      */
     public function show($id)
     {
-       //$comments = Comment::find($id);
-       //return view('pages.posts.show')->with('comment', $comments);
-        // Validat the ID
-        if($id == '' || !is_numeric($id)){
-            // Alert User of invalid ID
-        }
+        $user = Auth::user()->name;
+        $post = Post::find($id);
+        $comments = Comment::all()->where('postId', $id)->where('userId', Auth::user()->id);
 
-        // Valid id
-        $post =  Post::find($id);
-        //$cows_tag = $cow->tag_no;
-        //$calves = Calf::where('cows_tag' ,$cows_tag )->get();
-        return view('posts.show', compact('post'));
+        return view('pages.posts.show', compact('post' , 'comments', 'user'));
     }
 
     /**

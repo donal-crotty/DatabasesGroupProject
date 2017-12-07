@@ -45,12 +45,7 @@
                     <p>View the finest whiskies the world has to offer with
                         our up-to-date database.
                     </p>
-                     @if (Auth::user()->user_type=="admin")
-                     <h1>ADMIN IS LOGGED IN</h1>
-                     @else
-                     <h1>USER IS LOGGED IN</h1>
-                     @endif
-                     <p>
+                 
                 </div>
             </div>
             <hr>

@@ -30,12 +30,18 @@
                 </div>
                 <div class="col-lg-12">
                     <div>
+                    <hr>
                        @if(count($comments)>= 1)
                             @foreach($comments as $comment)
                             <div class="well">
                                 <p>{{$comment->comment}}</p>
-                                <small>Written on {{$comment->created_at}}</small>
-                                {{--  <small>By {{$user->name}}</small>  --}}
+                                <hr>
+                                <div class="col-lg-3">
+                                    <small><b>Written on: </b> {{$comment->created_at}}</small>
+                                </div>
+                                <div class="col-lg-3">
+                                    <small><b>By: </b> {{$comment->user}}</small>
+                                </div>
                             </div>
                             @endforeach
                         @else 
