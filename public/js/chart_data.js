@@ -1,6 +1,5 @@
 // Create the pie drilldown chart
 function whiskeyChart(){
-  //alert("called");
   $.ajax({
     url:"http://localhost:8080/databases_project/public/show",
     type:"GET",
@@ -8,10 +7,16 @@ function whiskeyChart(){
     dataType: "json",
     success:function(data){
       //Handle Data
-      console.log(data);
-      var data = JSON.parse(data);
+
+      var chart_data = [];
+
       $.each(data , function(key,value){
-        console.log(key + "  " + value);
+        var obj = {
+          "name" : value.brand,
+          "y" : value.id,
+          "drilldown": value.body
+        };
+        chart_data.push(obj);
       });
 
       //chart stuff here
@@ -41,6 +46,7 @@ function whiskeyChart(){
         series: [{
           name: 'Brands',
           colorByPoint: true,
+          data: chart_data
         }]
       });
     },
