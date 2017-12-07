@@ -2,9 +2,9 @@
 function whiskeyChart(){
   alert("called");
   $.ajax({
-    url:"http://localhost:8080/show",
+    url:"http://localhost:8080/databases_project/public/show",
     type:"GET",
-    async: true,
+    //async: true,
     dataType: "json",
     success:function(data){
       //Handle Data
@@ -42,8 +42,7 @@ function whiskeyChart(){
           name: 'Brands',
           colorByPoint: true,
         }]
-      }
-    });
+      });
     },
     error:function(data){
       alert('Failed');
