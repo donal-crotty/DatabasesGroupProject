@@ -22,7 +22,6 @@ class AdminController extends Controller
 	{	
 		$users =User::all()->where('user_type' , 'user');
 		return view('pages.admin.dashboard' , compact('users'));
-
-
+		
 	}
 }

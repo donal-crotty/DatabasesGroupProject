@@ -2,7 +2,7 @@
 @extends('includes.header')
 @section('content')
 
-<!-- <script src="{{ asset('/js/chart_data.js') }}"></script> -->
+<script src="{{ asset('/js/chart_data.js') }}"></script>
 <section>
 	<div class="container">
 		<div class="row">

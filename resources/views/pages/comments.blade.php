@@ -16,6 +16,7 @@
                                 <hr>
                                 <div class="col-lg-3">
                                     <small><b>Written on: </b> {{$comment->created_at}}</small>
+                                    <small><b>By: </b>{{$comment->userId}}</small>
                                 </div>
                             </div>
                             @endforeach

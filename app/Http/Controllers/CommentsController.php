@@ -60,11 +60,17 @@ class CommentsController extends Controller
      */
     public function show($id)
     {
-        $user = Auth::user()->name;
+        $user = Auth::user()->id;
         $post = Post::find($id);
-        $comments = Comment::all()->where('postId', $id)->where('userId', Auth::user()->id);
+        // $comments = Comment::all()->where('postId', $id)->where('userId', Auth::user()->id);
+        $comments = Comment::all()->where('userId', 'id');
 
-        return view('pages.posts.show', compact('post' , 'comments', 'user'));
+          //Get users name
+        foreach($comments as $i => $v){
+            $current_user = User::find($v['userId']);
+            $comments[$i]['user'] = $current_user['name'];
+        }
+        return view('pages.comments', compact('post' , 'comments', 'user'));
     }
 
     /**

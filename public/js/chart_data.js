@@ -1,7 +1,7 @@
 // Create the pie drilldown chart
 function whiskeyChart(){
   $.ajax({
-    url:"http://localhost:8080/databases_project/public/show",
+    url:"http://localhost/BitBucket/databases_project/public/show",
     type:"GET",
     //async: true,
     dataType: "json",
