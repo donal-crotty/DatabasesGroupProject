@@ -7,14 +7,14 @@
        <div class="col-lg-12">
            @if (Auth::guest())
                 <h1>Read some of Our Latest Whiskey Reviews</h1>
-                <h2>Please Login/Register to give us your opinions.</h2>
+                <h2>Please Login/Register to View our Posts and give us your opinions.</h2>
                 <hr>
-                <p>Here are our latest posts about Ireland's Finest Whiskies.
+                <p>Here is a Teaser of this months Articles.
                 </p>
                 @if(count($posts)> 1)
                     @foreach($posts as $post)
                         <div class="well">
-                            <h3><a href="posts/{{$post->id}}">{{$post->brand}} - {{$post->product}}</a></h3>
+                            <h3>{{$post->brand}} - {{$post->product}}</h3>
                             <small>Written on {{$post->created_at}}</small>
                         </div>
                     @endforeach
@@ -27,7 +27,7 @@
                 <form action="{{ action('PostsController@store') }}" method="POST">
                     <div class="form-group">
                         <label>Brand</label>
-                        <input type="text" class="form-control" id="brand" name="brand" placeholder="Skulling Whiskey is....">
+                        <input type="text" class="form-control" id="brand" name="brand" placeholder="">
                     </div>
                     <div class="form-group">
                         <label>Product</label>

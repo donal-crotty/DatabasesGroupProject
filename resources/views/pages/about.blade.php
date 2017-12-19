@@ -7,8 +7,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<h1>About Us</h1>
-				<p>View the finest whiskies the world has to offer with our up-to-date database.
-				</p>
+				<hr>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at lacus a leo sodales lacinia ac in risus. In hac habitasse
 					platea dictumst. Donec molestie, nunc vitae lobortis scelerisque, ante mauris lacinia dolor, in efficitur purus lacus
 					sit amet ligula. Integer tincidunt purus eu vehicula pretium. Ut id risus malesuada, accumsan nunc nec, lacinia nisl.

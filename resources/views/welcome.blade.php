@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>The world's finest whiskey, in the eyes of the Cooper.</h1>
-                    <p>View the finest whiskies the world has to offer with
+                    <p>View Posts about the finest whiskies the world has to offer with
                         our up-to-date database.
                     </p>
                 </div>
@@ -55,7 +55,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Featured Whiskies</h2>
+                <h2 class="page-header">Featured Posts</h2>
             </div>
             <div class="col-md-4 col-sm-6">
                 <img class="img-responsive img-portfolio img-hover" src="images/img_placeholder.png" alt="">
