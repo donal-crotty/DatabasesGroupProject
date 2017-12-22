@@ -27,6 +27,8 @@
 
     <script src="{{ asset('/js/chart_data.js') }}"></script>
 
+
+
 </head>
 
 <body id="page-top">

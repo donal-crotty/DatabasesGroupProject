@@ -26,13 +26,12 @@ DROP TABLE IF EXISTS `posts`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `posts` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `brand` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `product` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `body` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `brand` varchar(255)  NOT NULL,
+  `product` varchar(255)  NOT NULL,
+  `body` varchar(1000)  NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `image` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `product_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
